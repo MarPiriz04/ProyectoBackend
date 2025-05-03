@@ -21,7 +21,7 @@ const products = [
 ];
 
 
-const populateProducts = async () => {
+export default async function populateProducts() {
   try {
     await mongoose.connect('mongodb://localhost:27017/farmaciaVeracierto', { // Connect to the farmaciaVeracierto database
       useNewUrlParser: true,
@@ -41,5 +41,3 @@ const populateProducts = async () => {
     console.error('Error connecting to MongoDB:', error);
   }
 };
-
-populateProducts();
